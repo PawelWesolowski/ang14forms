@@ -5,11 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFormComponent } from './my-form/my-form.component';
+import { MainComponent } from './main/main.component';
+import { SmallComponent } from './small/small.component';
+import { BigComponent } from './big/big.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFormComponent
+    MyFormComponent,
+    MainComponent,
+    SmallComponent,
+    BigComponent
   ],
   imports: [
     BrowserModule,

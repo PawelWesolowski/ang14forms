@@ -1,1 +1,9 @@
-<app-my-form></app-my-form>
+<nav>
+    <ul>
+        <li><a routerLink="/main" routerLinkActive="active" ariaCurrentWhenActive="page">Main</a></li>
+        <li><a routerLink="/small" routerLinkActive="active" ariaCurrentWhenActive="page">Small</a></li>
+        <li><a routerLink="/big" routerLinkActive="active" ariaCurrentWhenActive="page">Big</a></li>
+    </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
