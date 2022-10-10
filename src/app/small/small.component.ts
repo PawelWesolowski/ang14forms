@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 export class SmallComponent implements OnInit {
 
   twoDigit = new FormControl('');
+  email = new FormControl('');
 
   constructor() { }
 
