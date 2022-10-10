@@ -6,16 +6,23 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HugeModelService {
 
-  private mainModel: Model|null = null;
-  public mainModel$: BehaviorSubject<Model|null> = new BehaviorSubject<Model|null>(null);
+  private mainModel: Model | null = null;
+  public mainModel$: BehaviorSubject<Model | null> = new BehaviorSubject<Model | null>(null);
 
 
   constructor() { }
 
-  public createMain(){
+  public createMain() {
     this.mainModel = new Model();
     this.mainModel$.next(this.mainModel);
+  }
 
+  public createSmall() {
+    this.mainModel?.createSmall();
+  }
+
+  public createBig() {
+    this.mainModel?.createBig(1000_00);
   }
 
 }

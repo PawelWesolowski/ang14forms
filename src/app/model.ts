@@ -4,10 +4,23 @@ export class SmallSubModel{
 }
 
 export class HugeSubModel{
-    hugeArray: string[] =  [...Array(1000_000)].map(x => x.toString());
+    hugeArray: string[]|null = null;
+    constructor(size: number){
+        this.hugeArray = Array.from({length: size}, (x, i) => i.toString());
+    }
 }
 
 export class Model {
-    small: SmallSubModel = new SmallSubModel();
-    big: HugeSubModel = new HugeSubModel()
+    small: SmallSubModel|null = null;
+    big: HugeSubModel|null = null;
+
+    public createSmall(){
+        this.small = new SmallSubModel();
+    }
+
+    public createBig(size: number){
+        this.big = new HugeSubModel(size);
+    }
+
+
 }
