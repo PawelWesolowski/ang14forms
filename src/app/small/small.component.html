@@ -1,2 +1,7 @@
-Two digits: <input type="text" [formControl]="twoDigit">
-Email: <input type="email" [formControl]="email">
+<div style="margin:30px">
+    Two digits: <input type="text" [formControl]="twoDigit">
+    Email: <input type="email" [formControl]="email">
+</div>
+
+<p> Small model $: {{hugeModelService.getSmallModel$() | async | json}}</p>
+<p> Small model: {{hugeModelService.mainModel?.small | json}}</p>

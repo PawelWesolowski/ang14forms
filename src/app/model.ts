@@ -1,12 +1,12 @@
 export class SmallSubModel{
-    twoDigitNumber: number = 10;
-    email: string = "example@domain.com";
+    twoDigitNumber: number | undefined | null = 10;
+    email: string | undefined | null = "example@domain.com";
 }
 
 export class HugeSubModel{
     hugeArray: string[]|null = null;
     constructor(size: number){
-        this.hugeArray = Array.from({length: size}, (x, i) => i.toString());
+        this.hugeArray = Array.from({length: size}, (x, i) => (i+size).toString());
     }
 }
 

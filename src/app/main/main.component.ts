@@ -13,15 +13,15 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  create() {
-    this.hugeModelService.createMain()
-  }
-
-  createSmall() {
-    this.hugeModelService.createSmall()
-  }
-
-  createBig() {
-    this.hugeModelService.createBig()
-  }
+  // create() {
+  //   this.hugeModelService.createMain()
+  // }
+  //
+  // createSmall() {
+  //   this.hugeModelService.createSmall()
+  // }
+  //
+  // createBig() {
+  //   this.hugeModelService.createBig()
+  // }
 }
