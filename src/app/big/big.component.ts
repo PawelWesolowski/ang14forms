@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HugeModelService} from "../huge-model.service";
 
 @Component({
   selector: 'app-big',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BigComponent implements OnInit {
 
-  constructor() { }
+  constructor(public hugeModelService: HugeModelService) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HugeModelService} from "./huge-model.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang14forms';
+
+  constructor(public hugeModelService: HugeModelService) {
+
+  }
+
 }

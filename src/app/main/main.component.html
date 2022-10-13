@@ -1,12 +1,3 @@
-<div style="margin:30px">
-    <button (click)="hugeModelService.createMain()">Create main</button>
-    <button (click)="hugeModelService.createSmall()">Create small</button>
-    <button (click)="hugeModelService.createBig()">Create big</button>
-    <button (click)="hugeModelService.destroyMain()">Destroy main</button>
-    <button (click)="hugeModelService.destroySmall()">Destroy small</button>
-    <button (click)="hugeModelService.destroyBig()">Destroy big</button>
-</div>
-
 <app-small></app-small>
 
 <p> Main model $: {{hugeModelService.mainModel$ | async | json}}</p>

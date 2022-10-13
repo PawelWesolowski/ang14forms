@@ -5,5 +5,14 @@
         <li><a routerLink="/big" routerLinkActive="active" ariaCurrentWhenActive="page">Big</a></li>
     </ul>
 </nav>
-<!-- The routed views render in the <router-outlet>-->
+
+<div style="margin:30px">
+    <button (click)="hugeModelService.createMain()">Create main</button>
+    <button (click)="hugeModelService.createSmall()">Create small</button>
+    <button (click)="hugeModelService.createBig()">Create big</button>
+    <button (click)="hugeModelService.destroyMain()">Destroy main</button>
+    <button (click)="hugeModelService.destroySmall()">Destroy small</button>
+    <button (click)="hugeModelService.destroyBig()">Destroy big</button>
+</div>
+
 <router-outlet></router-outlet>

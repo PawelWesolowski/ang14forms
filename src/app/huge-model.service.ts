@@ -47,5 +47,10 @@ export class HugeModelService {
         map((mainModel) => mainModel?.small)
     );
   }
+  public getBigModel$() : Observable<HugeSubModel|null|undefined>{
+    return this.mainModel$.asObservable().pipe(
+        map((mainModel) => mainModel?.big)
+    );
+  }
 
 }
