@@ -1,3 +1,8 @@
-<p> Big model $: {{hugeModelService.getBigModel$() | async | json}}</p>
-<p> Big model: {{hugeModelService.mainModel?.big | json}}</p>
-
+<div *ngIf="hugeModelService.useRx;else non_reactive">
+  <p> Big model $: {{hugeModelService.getBigModel$() | async | json}}</p>
+</div>
+<ng-template #non_reactive>
+  <div>
+    <p> Big model: {{hugeModelService.mainModel?.big | json}}</p>
+  </div>
+</ng-template>

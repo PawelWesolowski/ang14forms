@@ -1,6 +1,7 @@
 <nav>
     <ul>
         <li><a routerLink="/main" routerLinkActive="active" ariaCurrentWhenActive="page">Main</a></li>
+      <li><a routerLink="/both" routerLinkActive="active" ariaCurrentWhenActive="page">Both</a></li>
         <li><a routerLink="/small" routerLinkActive="active" ariaCurrentWhenActive="page">Small</a></li>
         <li><a routerLink="/big" routerLinkActive="active" ariaCurrentWhenActive="page">Big</a></li>
     </ul>
@@ -13,6 +14,13 @@
     <button (click)="hugeModelService.destroyMain()">Destroy main</button>
     <button (click)="hugeModelService.destroySmall()">Destroy small</button>
     <button (click)="hugeModelService.destroyBig()">Destroy big</button>
+  <button (click)="hugeModelService.useRx=!hugeModelService.useRx">Rx now:{{hugeModelService.useRx}}</button>
 </div>
+
+<div style="margin:30px">
+  Big model array size (after recreate): <input type="text" [formControl]="twoDigit">
+  Email: <input type="email" [formControl]="email">
+</div>
+
 
 <router-outlet></router-outlet>

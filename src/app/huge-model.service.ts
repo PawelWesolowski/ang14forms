@@ -6,10 +6,10 @@ import {BehaviorSubject, map, Observable} from 'rxjs';
 })
 export class HugeModelService {
 
+  public useRx = false;
+
   public mainModel: Model | null = null;
   public mainModel$: BehaviorSubject<Model | null> = new BehaviorSubject<Model | null>(null);
-  //public mainModel$: BehaviorSubject<Model | null> = new BehaviorSubject<Model | null>(this.mainModel);
-
 
   constructor() {
 

@@ -1,9 +1,8 @@
-<div style="margin:30px">
-    Two digits: <input type="text" [formControl]="twoDigit">
-    Email: <input type="email" [formControl]="email">
+<div *ngIf="hugeModelService.useRx;else non_reactive">
+  <p> Small model $: {{hugeModelService.getSmallModel$() | async | json}}</p>
 </div>
-
-<p> Small model $: {{hugeModelService.getSmallModel$() | async | json}}</p>
-<p> Small model: {{hugeModelService.mainModel?.small | json}}</p>
-
-<app-big></app-big>
+<ng-template #non_reactive>
+  <div>
+    <p> Small model: {{hugeModelService.mainModel?.small | json}}</p>
+  </div>
+</ng-template>

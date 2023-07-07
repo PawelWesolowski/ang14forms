@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { BigComponent } from './big/big.component';
 import { MainComponent } from './main/main.component';
 import { SmallComponent } from './small/small.component';
+import {BothComponent} from "./both/both.component";
 
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'small', component: SmallComponent },
-  { path: 'big', component: BigComponent }
+  { path: 'big', component: BigComponent },
+  { path: 'both', component: BothComponent}
 ];
 
 @NgModule({

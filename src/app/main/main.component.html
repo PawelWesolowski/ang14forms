@@ -1,4 +1,8 @@
-<app-small></app-small>
-
-<p> Main model $: {{hugeModelService.mainModel$ | async | json}}</p>
-<p> Main model: {{hugeModelService.mainModel  | json}}</p>
+<div *ngIf="hugeModelService.useRx;else non_reactive">
+  <p> Main model (reactive): {{hugeModelService.mainModel$ | async | json}}</p>
+</div>
+<ng-template #non_reactive>
+  <div>
+    <p> Main model (non reactive) {{hugeModelService.mainModel  | json}}</p>
+  </div>
+</ng-template>
