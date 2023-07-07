@@ -31,6 +31,7 @@ export class HugeModelService {
 
   public createBig() {
     this.mainModel?.createBig(this.mainModel?.small?.twoDigitNumber);
+    this.mainModel$.next(this.mainModel);
   }
 
   public destroySmall(){
