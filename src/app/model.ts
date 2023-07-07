@@ -18,8 +18,8 @@ export class Model {
         this.small = new SmallSubModel();
     }
 
-    public createBig(size: number){
-        this.big = new HugeSubModel(size);
+    public createBig(size?: number | null){
+        this.big = new HugeSubModel(size??10);
     }
 
 

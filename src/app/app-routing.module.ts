@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'small', component: SmallComponent },
   { path: 'big', component: BigComponent },
-  { path: 'both', component: BothComponent}
+  { path: 'both', component: BothComponent},
+  { path: '', component: MainComponent},
 ];
 
 @NgModule({

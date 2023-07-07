@@ -1,8 +1,10 @@
 <div *ngIf="hugeModelService.useRx;else non_reactive">
-  <p> Big model $: {{hugeModelService.getBigModel$() | async | json}}</p>
+  <p>Big model $:</p>
+  <p *ngFor="let el of hugeModelService.getBigModelsArray$() | async"> {{el}}</p>
 </div>
 <ng-template #non_reactive>
   <div>
-    <p> Big model: {{hugeModelService.mainModel?.big | json}}</p>
+    <p>Big model:</p>
+    <p *ngFor="let el of hugeModelService.mainModel?.big?.hugeArray"> {{el}}</p>
   </div>
 </ng-template>

@@ -30,7 +30,7 @@ export class HugeModelService {
   }
 
   public createBig() {
-    this.mainModel?.createBig((this.mainModel?.small?.twoDigitNumber) ?? 100000);
+    this.mainModel?.createBig(this.mainModel?.small?.twoDigitNumber);
   }
 
   public destroySmall(){
@@ -53,4 +53,9 @@ export class HugeModelService {
     );
   }
 
+  public getBigModelsArray$() : Observable<string[]|null|undefined>{
+    return this.mainModel$.asObservable().pipe(
+      map((mainModel) => mainModel?.big?.hugeArray)
+    );
+  }
 }
